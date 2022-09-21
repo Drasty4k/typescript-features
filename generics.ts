@@ -25,3 +25,6 @@ class ArrayOfAnything<T> {
 
 new ArrayOfAnything<string>(["a", "b", "c"]);
 new ArrayOfAnything<number>([1, 2, 3]);
+
+const stringArr = new ArrayOfAnything(["a", "b", "c"]);
+const numberArr = new ArrayOfAnything([1, 2, 3]);
