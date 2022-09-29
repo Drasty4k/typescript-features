@@ -1,3 +1,4 @@
+@classDecorator
 class Boat {
   @testDecorator           // When a Decorator is wrapped around a property definition within a class, 
   color: string = "red";   // we don't have direct access to that property since it's in the Constructor rather than the Prototype, as methods are.
@@ -17,6 +18,10 @@ class Boat {
       console.log("nothing");
     }
   }
+}
+
+function classDecorator(constructor: Function | typeof Boat) {
+  console.log(constructor);
 }
 
 function parameterDecorator(target: any, key: string, index: number) {
